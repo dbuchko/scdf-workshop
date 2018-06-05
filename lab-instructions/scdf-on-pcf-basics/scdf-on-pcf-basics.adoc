@@ -26,6 +26,8 @@ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
 cf install-plugin -r CF-Community "Service Instance Logging"
 ```
 
+== Creating a Pipeline Using the Shell
+
 . Work through the https://docs.pivotal.io/scdf/getting-started.html[Getting Started Guide] from the documentation.
 
 +
@@ -67,7 +69,14 @@ image::stream-starter-import.png[]
 stream create --name words --definition "http | splitter --expression=payload.split(' ') | log"
 ```
 
-. Deploy the stream, then test it using curl - posting to the HTTP source app URL.  You should tail the log sink application to see the output.
+. Deploy the stream.
+
++
+```
+stream deploy words --properties "app.splitter.producer.partitionKeyExpression=payload"
+```
+
+. Test it using curl - posting to the HTTP source app URL. (Your specific URL will differ.)  Tail the log sink application using `cf logs` to see the output.
 
 +
 ```
@@ -76,3 +85,7 @@ curl -X POST -H "Content-Type: text/plain" --data "This is a test" http://words-
 
 +
 image::simple-log-out.png[]
+
+== Creating a Stream Using the Dashboard GUI
+
+. Follow the instructions from the documentation to create the same stream using the Dashboard GUI.
