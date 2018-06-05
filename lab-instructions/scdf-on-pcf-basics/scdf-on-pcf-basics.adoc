@@ -14,7 +14,7 @@ Estimated Time: TBD
 
 https://docs.pivotal.io/scdf/index.html[SCDF on PCF Reference Documentation]
 
-. Install CF CLI plugins, as per the documentation.
+. Install the Spring Cloud Data Flow CF CLI plugins, as per the documentation.
 
 +
 ```
@@ -25,6 +25,15 @@ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
 ```
 cf install-plugin -r CF-Community "Service Instance Logging"
 ```
++
+. Install the https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling[CF MySQL CLI plugin].
+
++
+```
+cf install-plugin -r "CF-Community" mysql-plugin
+```
+
+
 
 == Creating a Pipeline Using the Shell
 
@@ -94,13 +103,6 @@ image::simple-log-out.png[]
 == Create an HTTP to SQL Stream on PCF
 
 . Create a MySQL service instance in your PCF space.
-
-. Download and install the https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling[CF MySQL CLI plugin].
-
-+
-```
-cf install-plugin -r "CF-Community" mysql-plugin
-```
 
 . Use the plugin to connect to your database instance.
 
