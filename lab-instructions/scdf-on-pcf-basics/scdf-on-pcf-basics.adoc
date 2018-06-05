@@ -89,3 +89,24 @@ image::simple-log-out.png[]
 == Creating a Stream Using the Dashboard GUI
 
 . Follow the instructions from the documentation to create the same stream using the Dashboard GUI.
+
+
+== Create an HTTP to SQL Stream on PCF
+
+. Create a MySQL service instance in your PCF space.
+
+. Download and install the https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling[CF MySQL CLI plugin].
+
++
+```
+cf install-plugin -r "CF-Community" mysql-plugin
+```
+
+. Use the plugin to connect to your database instance.
+
++
+```
+cf mysql <your-instance-name>
+```
+
+. Follow the instructions from the https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/#_using_the_cloud_foundry_server[documentation] to create the HTTP to SQL stream on PCF.
