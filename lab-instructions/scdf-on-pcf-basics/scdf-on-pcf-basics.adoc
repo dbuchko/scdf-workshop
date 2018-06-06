@@ -114,4 +114,4 @@ cf mysql <your-instance-name>
 . Follow the instructions from the https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/#_using_the_cloud_foundry_server[documentation] to create the HTTP to SQL stream on PCF.
 
 +
-NOTE: Use curl or Postman to post JSON data to the HTTP source, eg. `curl -X POST -H "Content-Type: text/plain" --data '{"name":"John Doe"}' http://mysqlstream-http-v1.apps.dbuchko.pivotaledu.io`
+NOTE: In addition to using the HTTP post command from the SCDF shell, you can use curl or Postman to post JSON data to the HTTP source, eg. `curl -X POST -H "Content-Type: application/json" --data '{"name":"John Doe"}' http://mysqlstream-http-v1.apps.dbuchko.pivotaledu.io`
