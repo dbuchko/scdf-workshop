@@ -8,9 +8,11 @@ Start working with the SCDF service on PCF.
 
 --
 
-== Prerequisites
+== References
 
 https://docs.pivotal.io/scdf/index.html[SCDF on PCF Reference Documentation]
+
+== Prerequisites
 
 . Install the Spring Cloud Data Flow CF CLI plugins, as per the documentation.
 
