@@ -4,7 +4,7 @@
 
 [abstract]
 --
-Demonstrate how to create tasks and batch jobs in Spring Cloud Data Flow on PCF.
+Demonstrate how to create tasks and batch jobs in Spring Cloud Data Flow on PCF.  This lab is based on the https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/#_batch_job_on_cloud_foundry[sample from the documentation].
 
 --
 
