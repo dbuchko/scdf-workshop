@@ -8,8 +8,6 @@ Start working with the SCDF service on PCF.
 
 --
 
-Estimated Time: TBD
-
 == Prerequisites
 
 https://docs.pivotal.io/scdf/index.html[SCDF on PCF Reference Documentation]
@@ -35,7 +33,7 @@ cf install-plugin -r "CF-Community" mysql-plugin
 
 
 
-== Creating a Pipeline Using the Shell
+== Creating a Stream Using the Shell
 
 . Work through the https://docs.pivotal.io/scdf/getting-started.html[Getting Started Guide] from the documentation.
 
